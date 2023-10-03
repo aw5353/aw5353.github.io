@@ -1,0 +1,502 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Slider</title>
+		<style>
+			table
+			{
+				border: thick solid black;
+				width:100%;
+				background-color:#72A0C1;
+			}
+			td
+			{
+				border: thin solid black;
+				padding: 3px;
+				width:25%;
+				text-align: center;
+			}
+			span
+			{
+				color: blue;
+			}
+			div
+			{
+				text-align:center;
+			}
+			body
+			{
+				background-color:#9933FF;
+			}
+			.help
+			{
+				margin-left: auto;
+      			margin-right: auto;
+			}
+		</style>
+		<script>
+			function initialize()
+			{
+				c1 = document.getElementById("cell1");
+				c2 = document.getElementById("cell2");
+				c3 = document.getElementById("cell3");
+				c4 = document.getElementById("cell4");
+				c5 = document.getElementById("cell5");
+				c6 = document.getElementById("cell6");
+				c7 = document.getElementById("cell7");
+				c8 = document.getElementById("cell8");
+				c9 = document.getElementById("cell9");
+				c10 = document.getElementById("cell10");
+				c11 = document.getElementById("cell11");
+				c12 = document.getElementById("cell12");
+				c13 = document.getElementById("cell13");
+				c14 = document.getElementById("cell14");
+				c15 = document.getElementById("cell15");
+				c16 = document.getElementById("cell16");
+				count = document.getElementById("counter");
+				turn = 0;
+				restart();
+				showIns = false;
+				display();
+			}
+					
+			function isC1Blank(swapCell)
+			{
+				if (C1 != "")
+					return false;
+					
+				C1 = swapCell;
+				return true;
+			}
+			
+			function isC2Blank(swapCell)
+			{
+				if (C2 != "")
+					return false;
+					
+				C2 = swapCell;
+				return true;
+			}
+			
+			function isC3Blank(swapCell)
+			{
+				if (C3 != "")
+					return false;
+					
+				C3 = swapCell;
+				return true;
+			}
+			
+			function isC4Blank(swapCell)
+			{
+				if (C4 != "")
+					return false;
+					
+				C4 = swapCell;
+				return true;
+			}
+			
+			function isC5Blank(swapCell)
+			{
+				if (C5 != "")
+					return false;
+					
+				C5 = swapCell;
+				return true;
+			}
+			
+			function isC6Blank(swapCell)
+			{
+				if (C6 != "")
+					return false;
+					
+				C6 = swapCell;
+				return true;
+			}
+			
+			function isC7Blank(swapCell)
+			{
+				if (C7 != "")
+					return false;
+					
+				C7 = swapCell;
+				return true;
+			}
+			
+			function isC8Blank(swapCell)
+			{
+				if (C8 != "")
+					return false;
+					
+				C8 = swapCell;
+				return true;
+			}
+			
+			function isC9Blank(swapCell)
+			{
+				if (C9 != "")
+					return false;
+				
+				C9 = swapCell;
+				return true;
+			}
+			
+			function isC10Blank(swapCell)
+			{
+				if (C10 != "")
+					return false;
+				
+				C10 = swapCell;
+				return true;
+			}
+			
+			function isC11Blank(swapCell)
+			{
+				if (C11 != "")
+					return false;
+				
+				C11 = swapCell;
+				return true;
+			}
+			
+			function isC12Blank(swapCell)
+			{
+				if (C12 != "")
+					return false;
+				
+				C12 = swapCell;
+				return true;
+			}
+				
+			function isC13Blank(swapCell)
+			{
+				if (C13 != "")
+					return false;
+				
+				C13 = swapCell;
+				return true;
+			}
+			
+			function isC14Blank(swapCell)
+			{
+				if (C14 != "")
+					return false;
+				
+				C14 = swapCell;
+				return true;
+			}
+
+			function isC15Blank(swapCell)
+			{
+				if (C15 != "")
+					return false;
+				
+				C15 = swapCell;
+				return true;
+			}
+			
+			function isC16Blank(swapCell)
+			{
+				if (C16 != "")
+					return false;
+				
+				C16 = swapCell;
+				return true;
+			}
+			
+			function moveCell1()
+			{ 	
+				if (isC2Blank(C1) || isC5Blank(C1))
+				{
+					C1 = "";
+					if (canMove)
+						turn++;
+					display();
+					win();
+				}	
+			}
+			function moveCell2()
+			{ 	
+				if (isC1Blank(C2) || isC6Blank(C2) || isC3Blank(C2))
+				{
+					C2 = "";
+					if (canMove)
+						turn++;
+					display();
+					win();
+				}	
+			}
+			function moveCell3()
+			{ 	
+				if (isC2Blank(C3) || isC4Blank(C3) || isC7Blank(C3))
+				{
+					C3 = "";
+					if (canMove)
+						turn++;
+					display();
+					win();
+				}	
+			}
+			function moveCell4()
+			{ 	
+				if (isC3Blank(C4) || isC8Blank(C4))
+				{
+					C4 = "";
+					if (canMove)
+						turn++;
+					display();
+					win();
+				}	
+			}
+			function moveCell5()
+			{ 	
+				if (isC1Blank(C5) || isC6Blank(C5) || isC9Blank(C5))
+				{
+					C5 = "";
+					if (canMove)
+						turn++;
+					display();
+					win();
+				}	
+			}
+			function moveCell6()
+			{ 	
+				if (isC5Blank(C6) || isC7Blank(C6) || isC2Blank(C6) || isC10Blank(C6))
+				{
+					C6 = "";
+					if (canMove)
+						turn++;
+					display();
+					win();
+				}	
+			}
+			function moveCell7()
+			{ 	
+				if (isC6Blank(C7) || isC8Blank(C7) || isC3Blank(C7) || isC11Blank(C7))
+				{
+					C7 = "";
+					if (canMove)
+						turn++;
+					display();
+					win();
+				}	
+			}
+			function moveCell8()
+			{ 	
+				if (isC7Blank(C8) || isC4Blank(C8) || isC12Blank(C8))
+				{
+					C8 = "";
+					if (canMove)
+						turn++;
+					display();
+					win();
+				}	
+			}
+			
+		
+			function moveCell9()
+			{ 	
+				if (isC5Blank(C9) || isC10Blank(C9) || isC13Blank(C9))
+				{
+					C9 = "";
+					if (canMove)
+						turn++;
+					display();
+					win();
+				}	
+			}
+			
+			function moveCell10()
+			{
+				if (isC6Blank(C10) || isC9Blank(C10) || isC11Blank(C10) || isC14Blank(C10))
+				{
+					C10 = "";
+					if (canMove)
+						turn++;
+					display();
+					win();
+				}
+			}
+			
+			function moveCell11()
+			{ 	
+					if (isC10Blank(C11) || isC12Blank(C11) || isC7Blank(C11) || isC15Blank(C11))
+				{
+					C11 = "";
+					if (canMove)
+						turn++;
+					display();
+					win();
+				}
+			}
+			
+			function moveCell12()
+			{ 	
+				if (isC11Blank(C12) || isC8Blank(C12) || isC16Blank(C12))
+				{
+					C12 = "";
+					if (canMove)
+						turn++;
+					display();
+					win();
+				}	
+			}
+			
+			function moveCell13()
+			{ 	
+				if (isC9Blank(C13) || isC14Blank(C13))
+				{
+					C13 = "";
+					if (canMove)
+						turn++;
+					display();
+					win();
+				}	
+			}
+			
+			function moveCell14()
+			{ 	
+				if (isC13Blank(C14) || isC10Blank(C14) || isC15Blank(C14))
+				{
+					C14 = "";
+					if (canMove)
+						turn++;
+					display();
+					win();
+				}	
+			}
+			
+			function moveCell15()
+			{ 	
+				if (isC14Blank(C15) || isC11Blank(C15) || isC16Blank(C15))
+				{
+					C15 = "";
+					if (canMove)
+						turn++;
+					display();
+					win();
+				}	
+			}
+			
+			function moveCell16()
+			{ 	
+				if (isC15Blank(C16) || isC12Blank(C16))
+				{
+					C16 = "";
+					if (canMove)
+						turn++;
+					display();
+					win();
+				}	
+			}
+			
+			function display()
+			{
+				c1.innerHTML = "" + C1 + "";
+				c2.innerHTML = "" + C2 + "";
+				c3.innerHTML = "" + C3 + "";
+				c4.innerHTML = "" + C4 + "";
+				c5.innerHTML = "" + C5 + "";
+				c6.innerHTML = "" + C6 + "";
+				c7.innerHTML = "" + C7 + "";
+				c8.innerHTML = "" + C8 + "";
+				c9.innerHTML = "" + C9 + "";
+				c10.innerHTML = "" + C10 + "";
+				c11.innerHTML = "" + C11 + "";
+				c12.innerHTML = "" + C12 + "";
+				c13.innerHTML = "" + C13 + "";
+				c14.innerHTML = "" + C14 + "";
+				c15.innerHTML = "" + C15 + "";
+				c16.innerHTML = "" + C16 + "";
+				count.innerHTML = "" + turn + "";
+			}
+			function start()
+			{
+				turn = 0;
+				canMove = true;
+				display();
+				win();
+			}
+			function restart()
+			{
+				canMove = false;
+				C1 = 1;
+				C2 = 2;
+				C3 = 3;
+				C4 = 4;
+				C5 = 5;
+				C6 = 6;
+				C7 = 7;
+				C8 = 8;
+				C9 = 9;
+				C10 = 10;
+				C11 = 11;
+				C12 = 12;
+				C13 = 13;
+				C14 = 14;
+				C15 = 15;
+				C16 = "";
+				winText.innerHTML = "";
+				display();
+			}
+			function win()
+			{
+				if (C1 == 1 && C2 == 2 && C3 == 3 && C4 == 4 && C5 == 5 && C6 == 6 && C7 == 7 && C8 == 8 && C9 == 9 && C10 == 10 && C11 == 11 && C12 == 12 && C13 == 13 && C14 == 14 && C15 == 15 && C16 == "" && canMove)
+				{
+					
+					winText.innerHTML = "U did it! U finished in " + turn + " moves!!!";
+					canMove = false;
+				}
+			}
+			function instructions()
+			{
+				showIns = !showIns;
+				if (showIns)
+				{
+					instruction.innerHTML = "Shuffle numbers by clicking on boxes. Numbers will move to the empty box, as long as it is not diagonal from the box. When finished shuffling, press start and try to get the numbers back in order."
+				}
+				else 
+				{
+					instruction.innerHTML = "";
+				}
+			}
+		</script>
+	</head>
+	<body onload = "initialize();">
+		<div><h1> Slider Game </h1></div>
+		<div class="help"><button onclick = "instructions();">How to Play</button></div>
+		<div id = "instruction"></div>
+		<br /> 
+		<br />
+		<table>
+			<tr>
+				<td id = "cell1" onclick = "moveCell1();">1</td>
+				<td id = "cell2" onclick = "moveCell2();">2</td>
+				<td id = "cell3" onclick = "moveCell3();">3</td>
+				<td id = "cell4" onclick = "moveCell4();">4</td>
+			</tr>
+			<tr>
+				<td id = "cell5" onclick = "moveCell5();">5</td>
+				<td id = "cell6" onclick = "moveCell6();">6</td>
+				<td id = "cell7" onclick = "moveCell7();">7</td>
+				<td id = "cell8" onclick = "moveCell8();">8</td>
+			</tr>
+			<tr>
+				<td id = "cell9" onclick = "moveCell9();">9</td>
+				<td id = "cell10" onclick = "moveCell10();">10</td>
+				<td id = "cell11" onclick = "moveCell11();">11</td>
+				<td id = "cell12" onclick = "moveCell12();">12</td>
+			</tr>
+			<tr>
+				<td id = "cell13" onclick = "moveCell13();">13</td>
+				<td id = "cell14" onclick = "moveCell14();">14</td>
+				<td id = "cell15" onclick = "moveCell15();">15</td>
+				<td id = "cell16" onclick = "moveCell16();"></td>
+			</tr>
+		</table>
+		<br />
+		<button onclick = "start();">Start</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <button onclick = "restart();">Restart</button><br />
+			<h3>Moves:&nbsp <span id = "counter"></span></h3>
+		<h2 id = "winText"></h2>
+	</body>
+</html>
